@@ -1,0 +1,12 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Check Cookie";
+}
+
+<h1>check your cookie</h1>
+
+<p>your cookie: @ViewBag.CookieValue</p>
+
+<form asp-controller="Home" asp-action="Index" method="get">
+    <button type="submit" class="btn btn-primary">set a new cookie</button>
+</form>

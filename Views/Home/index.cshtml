@@ -1,0 +1,26 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cookie setter</h1>
+
+<form asp-controller="Home" asp-action="SetCookie" method="post">
+    <div class="form-group">
+        <label for="value">Text</label>
+        <input type="text" id="value" name="value" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="expiry">valid till:</label>
+        <input type="datetime-local" id="expiry" name="expiry" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">set cookie</button>
+</form>
+
+<form asp-controller="Home" asp-action="CheckCookie" method="get">
+    <button type="submit" class="btn btn-info">check if it saved</button>
+</form>
+
+<form asp-controller="Home" asp-action="SimulateError" method="get">
+    <button type="submit" class="btn btn-info">SimulateError</button>
+</form>
